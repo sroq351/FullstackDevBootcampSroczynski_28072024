@@ -1,0 +1,48 @@
+<!--   
+
+Create small application "My expenses" with form to add expenses with name and amount. 
+ also lists of all added expenses and to each position add button "remove". Add also some text with total expenses amount.
+JavaScript:
+use array to save list of expenses
+try to split JS logic into smaller files and use import/export syntax
+don't use innerHTML to create DOM elements, instead of that use for instance createElement, appendChild etc.
+try to use localStorage to save data. Use these saved data on first app loading (optional)
+CSS:
+
+you can use any layout but try to keep good UX/HTML practice (add labels to inputs, use form, 
+use <ol>/<ul> elements for lists etc.)
+use bootstrap or any other framework to style your elements 
+(you can use also additional custom css but first of all you should use some framework)
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <div>
+
+      <h2>My expenses:</h2>
+      <form id="myExpenses">
+        <div>
+          <label for="expense">Expense:</label>
+          <input id="expense" name="expense" type="text" required />
+          <br>
+          <label for="amount">Amount:</label>
+          <input id="amount" name="amount" type="number" min="0.01" step="0.01" required />
+        </div>
+        <button type="submit" id="AddExpense">Add expense</button>
+      </form>
+      <p id="listofExpenses"></p> </p>
+      <h3 id="SumofExpenses"></h3>
+
+    </div>
+    <script src="References.js"></script>
+    <script src="form.js" ></script>
+  </body>
+</html>
