@@ -7,10 +7,11 @@ const expenseList = [];
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const expensenName = event.target.expense.value;
+  const expenseName = event.target.expense.value;
   const expenseAmount = Number(event.target.amount.value);
+
   expenseList.push({
-    name: expensenName,
+    name: expenseName,
     amount: expenseAmount,
   });
 });
