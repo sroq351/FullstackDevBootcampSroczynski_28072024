@@ -17,10 +17,10 @@ expenseForm.addEventListener("submit", (event) => {
     name: expenseName,
     amount: expenseAmount,
   });
-
+  listofExpenses.innerHTML = "";
   expenseList.forEach((expense) => {
     const li = document.createElement("li");
-    li.textContent = expense;
-    listofExpenses.appendChild("li");
+    li.textContent = `${expense.name}: ${expense.amount}`;
+    listofExpenses.appendChild(li);
   });
 });
