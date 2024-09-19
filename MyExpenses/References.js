@@ -1,6 +1,6 @@
-export const form = document.querySelector("#myExpenses");
-export const expense = document.querySelector("#expense");
-export const amount = document.querySelector("#amount");
-export const addExpense = document.querySelector("#AddExpense");
-export const listofExpenses = document.querySelector("#ListofExpenses");
-export const SumofExpenses = document.querySelector("#SumofExpenses");
+export const expenseForm = document.querySelector("myExpenses");
+export const expenseInput = document.querySelector("expense");
+export const amountInput = document.querySelector("amount");
+export const addExpenseButton = document.querySelector("AddExpense");
+export const listofExpenses = document.querySelector("ListofExpenses");
+export const sumofExpenses = document.querySelector("SumofExpenses");

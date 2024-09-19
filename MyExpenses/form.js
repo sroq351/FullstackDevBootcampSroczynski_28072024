@@ -1,14 +1,11 @@
-import { form } from "./MyExpenses/References.js";
-import { expense } from "./MyExpenses/References.js";
-import { amount } from "./MyExpenses/References.js";
-import { addExpense } from "./MyExpenses/References.js";
+import { amountInput, expenseInput, expenseForm } from "./References.js";
 
 const expenseList = [];
 
-form.addEventListener("submit", (event) => {
+expenseForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const expenseName = event.target.expense.value;
-  const expenseAmount = Number(event.target.amount.value);
+  const expenseName = event.target.expenseInput.value;
+  const expenseAmount = Number(event.target.amountInput.value);
 
   expenseList.push({
     name: expenseName,
