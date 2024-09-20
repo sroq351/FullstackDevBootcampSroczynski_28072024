@@ -1,35 +1,46 @@
-<!--   
-
-Create small application "My expenses" with form to add expenses with name and amount. 
- also lists of all added expenses and to each position add button "remove". Add also some text with total expenses amount.
-JavaScript:
-use array to save list of expenses
-try to split JS logic into smaller files and use import/export syntax
-don't use innerHTML to create DOM elements, instead of that use for instance createElement, appendChild etc.
-try to use localStorage to save data. Use these saved data on first app loading (optional)
-CSS:
-
-you can use any layout but try to keep good UX/HTML practice (add labels to inputs, use form, 
-use <ol>/<ul> elements for lists etc.)
-use bootstrap or any other framework to style your elements 
-(you can use also additional custom css but first of all you should use some framework)
-
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div>
+      <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+      ></script>
       <h2>My expenses:</h2>
-      <form id="myExpenses" name="myExpenses">
-        <div>
+      <form id="myExpenses" name="myExpenses" class="form-inline">
+        <div class="col-auto">
           <label for="expense">Expense:</label>
-          <input id="expense" name="expense" type="text" required />
+          <input
+            id="expense"
+            name="expense"
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            required
+          />
           <br />
           <label for="amount">Amount:</label>
           <input
@@ -38,16 +49,24 @@ use bootstrap or any other framework to style your elements
             type="number"
             min="0.01"
             step="0.01"
+            class="form-control"
             required
           />
         </div>
-        <button type="submit" id="AddExpense">Add expense</button>
+        <button type="submit" id="AddExpense" class="btn btn-primary mb-2">
+          Add expense
+        </button>
       </form>
-      <ul id="ListofExpenses">
+      <br />
+
+      <ul id="ListofExpenses" class="list-group">
         List of expenses
       </ul>
-      <h3 id="SumofExpenses">Sum of expenses</h3>
+      <br />
+      <h3 id="SumofExpenses" class="display-3" style="display: inline-block">
+        Total expenses
+      </h3>
     </div>
-    <script src="form.js" type="module"></script>
+    <script src="app.js" type="module"></script>
   </body>
 </html>
